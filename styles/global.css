@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.place-center {
+  @apply flex justify-center justify-items-center content-center items-center;
+}
+
+.standard-color {
+  @apply bg-gray-100;
+}
