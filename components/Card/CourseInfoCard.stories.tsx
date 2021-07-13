@@ -14,19 +14,16 @@ const Template: Story<CourseInfoCardProps> = ({
   tags,
   backgroundImage,
 }: CourseInfoCardProps) => (
-  <CourseInfoCard
-    title={title}
-    desc={desc}
-    tags={tags}
-    backgroundImage={backgroundImage}
-  />
+  <div className="grid">
+    <CourseInfoCard
+      title={title}
+      desc={desc}
+      tags={tags}
+      backgroundImage={backgroundImage}
+    />
+  </div>
 );
 
-// TODO: The mask should overlap the whole card,
-//       but it doesn't. Since it works properly
-//       in our Next.js instance, I assumed it is
-//       because Storybook didn't include some CSS needed.
-//       We should fix it after completing the main part.
 export const ExampleCard1 = Template.bind({});
 ExampleCard1.args = {
   title: "沒有駭客學校，但你可以自學。",
