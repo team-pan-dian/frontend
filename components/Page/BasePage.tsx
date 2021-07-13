@@ -39,7 +39,7 @@ export default function BasePage({
           <Navbar />
         </section>
         <section
-          className={`p-8 ${full && "h-full w-full"}`}
+          className={`${full && "h-full w-full"}`}
           style={{
             gridArea: "content",
           }}
