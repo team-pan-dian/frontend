@@ -1,11 +1,11 @@
 import React from "react";
 import BaseButton from "./BaseButton";
 
-export default function RefreshButton({
-  className = "",
-}: {
+export interface RefreshButtonProps {
   className?: string;
-}) {
+}
+
+export default function RefreshButton({ className = "" }: RefreshButtonProps) {
   return (
     <BaseButton
       className={className}
