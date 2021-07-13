@@ -1,14 +1,13 @@
 import React from "react";
-import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="p-8 grid grid-col-1 md:grid-col-3 content-center items-center">
+    <div className="p-4 grid grid-col-1 md:grid-col-3 content-center items-center standard-color">
       <div className="col-start-1 col-end-1">
-        <Image src="/icon.svg" width="36em" height="36em" />
+        <p>Demotion</p>
       </div>
       <div className="col-start-3 col-end-3 justify-self-end">
-        {/* Your Content */}
+        歡迎，Student
       </div>
     </div>
   );
