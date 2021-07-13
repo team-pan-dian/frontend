@@ -13,9 +13,9 @@ export interface CourseInfoCardProps {
 export function CourseInfoTags({ children: tag }: { children: string }) {
   return (
     <div
-      className={`w-12 h-6 rounded-2xl bg-${randColor()}-800 text-white text-sm text-center`}
+      className={`w-12 h-6 rounded-2xl bg-${randColor()}-800 text-white text-sm place-center`}
     >
-      {tag}
+      <div>{tag}</div>
     </div>
   );
 }
