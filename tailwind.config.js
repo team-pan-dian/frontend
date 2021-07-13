@@ -16,7 +16,7 @@ module.exports = {
         "1-3-screen": "40vw",
       },
       minHeight: {
-        "card": "24em",
+        "card": "18em",
       }
     },
   },

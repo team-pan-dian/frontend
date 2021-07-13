@@ -14,7 +14,7 @@ export default function BaseInfoCard({
 }: BaseInfoCardProps) {
   return (
     <div
-      className={`info-card rounded shadow-lg w-92 md:w-96 min-h-card ${className} cursor-pointer`}
+      className={`info-card rounded shadow-lg w-68 md:w-72 min-h-card ${className} cursor-pointer`}
       style={style}
     >
       {children}
