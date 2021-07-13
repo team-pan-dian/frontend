@@ -19,7 +19,9 @@ export default function HeaderBasePage({
 }: HeaderBasePageProps) {
   return (
     <BasePage id={id} title={title} full={full}>
-      <div className="p-8 standard-color place-center">{header}</div>
+      <div className="py-12 pt-16 px-8 standard-color place-center">
+        {header}
+      </div>
       {children}
     </BasePage>
   );
