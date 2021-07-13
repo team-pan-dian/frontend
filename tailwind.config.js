@@ -7,6 +7,17 @@ module.exports = {
         "serif": "'Noto Serif TC', serif",
         "mono": "'JetBrains Mono', monospace",
       },
+      width: {
+        "2-3-screen": "75vw",
+        "1-3-screen": "40vw",
+      },
+      height: {
+        "2-3-screen": "75vh",
+        "1-3-screen": "40vw",
+      },
+      minHeight: {
+        "card": "24em",
+      }
     },
   },
   variants: {
