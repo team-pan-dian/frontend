@@ -20,7 +20,7 @@ export default function ChooseCourse() {
         </div>
       }
     >
-      <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 m-6 justify-center justify-items-center">
+      <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 m-6 justify-center justify-items-center">
         <CourseInfoCard
           title="沒有駭客學校，但你可以自學。"
           desc="這堂課程可以讓您從零基礎，搖身一遍成為資安高手。"
