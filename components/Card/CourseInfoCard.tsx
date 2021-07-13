@@ -4,12 +4,27 @@ import { randColor } from "../../utilities/randcolor";
 import BaseInfoCard from "./BaseInfoCard";
 
 export interface CourseInfoCardProps {
+  /**
+   * 課程標題
+   */
   title: ReactNode;
+  /**
+   * 課程描述
+   */
   desc: ReactNode;
+  /**
+   * 課程標籤
+   */
   tags: string[];
+  /**
+   * 課程背景圖
+   */
   backgroundImage: string;
 }
 
+/**
+ * 課程資訊標籤。目前是用在 `CourseInfoCard` 裡面，用來顯示標籤。
+ */
 export function CourseInfoTags({ children: tag }: { children: string }) {
   return (
     <div
@@ -20,6 +35,9 @@ export function CourseInfoTags({ children: tag }: { children: string }) {
   );
 }
 
+/**
+ * 課程資訊卡。目前是用在 `/course/index` 展示可選課程的地方。
+ */
 export default function CourseInfoCard({
   title,
   desc,
