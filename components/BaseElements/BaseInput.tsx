@@ -2,7 +2,7 @@ import React from "react";
 
 export interface BaseInputsProps {
   id: string;
-  label: string;
+  label?: string;
   value?: string;
   onChange?: (value: string) => void;
 }
@@ -20,9 +20,11 @@ export default function BaseInput({
   return (
     <div className={partId}>
       <label className={labelId} htmlFor={inputId}>
-        <span className="mr-10" aria-label={label}>
-          {label}
-        </span>
+        {label && (
+          <span className="mr-10" aria-label={label}>
+            {label}
+          </span>
+        )}
         <input
           id="display-name-input"
           type="input"
