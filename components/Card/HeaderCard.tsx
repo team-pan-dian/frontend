@@ -1,3 +1,7 @@
+/**
+ * @deprecated 暫時用不到。不用管它。
+ */
+
 import type { ReactNode } from "react";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
