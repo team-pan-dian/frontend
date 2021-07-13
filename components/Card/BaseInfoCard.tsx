@@ -7,6 +7,9 @@ export interface BaseInfoCardProps {
   style?: React.CSSProperties;
 }
 
+/**
+ * 基礎資訊卡。較一般卡片 (`BaseInfoCard.tsx`) 小。
+ */
 export default function BaseInfoCard({
   children,
   className = "",
