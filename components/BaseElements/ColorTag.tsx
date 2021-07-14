@@ -11,7 +11,7 @@ export interface ColorTagProps {
 export function ColorTag({ children: tag }: ColorTagProps) {
   return (
     <div
-      className={`w-12 h-6 rounded-2xl bg-${randColor()}-800 text-white text-sm place-center`}
+      className={`min-w-12 max-w-max px-2 h-6 rounded-2xl bg-${randColor()}-800 text-white text-sm place-center`}
     >
       {tag}
     </div>
