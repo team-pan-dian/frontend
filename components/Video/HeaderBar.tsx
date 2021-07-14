@@ -1,8 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
-import BaseButton from "../Buttons/BaseButton";
 
 export interface HeaderBarProps {
   /**
@@ -13,10 +12,6 @@ export interface HeaderBarProps {
    * 影片名稱
    */
   videoName: string;
-  /**
-   * 影片 URL
-   */
-  videoUrl: string;
   /**
    * 是否持續顯示？
    */
@@ -29,7 +24,6 @@ export interface HeaderBarProps {
 export default function HeaderBar({
   persistentShow = false,
   videoName,
-  videoUrl,
   courseId,
 }: HeaderBarProps) {
   const router = useRouter();
@@ -56,14 +50,9 @@ export default function HeaderBar({
         <div className="font-bold">{videoName}</div>
       </div>
       <div className="space-x-2">
-        {/* <BaseButton className="bg-white text-black"> */}
+        {/* <BaseButton light> */}
         {/*  <FontAwesomeIcon icon={faStar} /> */}
         {/* </BaseButton> */}
-        <a href={videoUrl} download={videoName}>
-          <BaseButton className="text-white border-white">
-            <FontAwesomeIcon icon={faArrowDown} />
-          </BaseButton>
-        </a>
       </div>
     </div>
   );
