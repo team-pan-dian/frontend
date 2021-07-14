@@ -38,7 +38,7 @@ export default function VideoBundlePrefetchButton({
     case State.NOT_SYNCED:
       return (
         <BaseButton solid onClick={triggerDownload}>
-          <FontAwesomeIcon icon={faArrowDown} />
+          <FontAwesomeIcon icon={faArrowDown} /> 下載影片
         </BaseButton>
       );
     case State.SYNCING:
