@@ -37,9 +37,9 @@ export default function CourseVideoPlayer({
       navbar={false}
     >
       <HeaderBar
+        persistentShow={showHeaderBar}
         courseId={courseId}
         videoName={videoName}
-        videoUrl={videoUrl}
       />
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
