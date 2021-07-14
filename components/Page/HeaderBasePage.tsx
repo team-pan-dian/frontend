@@ -15,13 +15,15 @@ export default function HeaderBasePage({
   title,
   full,
   children,
-  header,
+  jumbotron,
+  jumbotronClassName = "py-12 pt-16 px-8 standard-color place-center",
+  jumbotronStyle = {},
 }: HeaderBasePageProps) {
   return (
     <BasePage id={id} title={title} full={full}>
-      <div className="py-12 pt-16 px-8 standard-color place-center">
-        {header}
-      </div>
+      <section className={jumbotronClassName} style={jumbotronStyle}>
+        {jumbotron}
+      </section>
       {children}
     </BasePage>
   );

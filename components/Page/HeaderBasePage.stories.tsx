@@ -13,9 +13,18 @@ export const HeaderBasePageExample: Story<HeaderBasePageProps> = ({
   title,
   children,
   full,
-  header,
+  jumbotron,
+  jumbotronClassName,
+  jumbotronStyle,
 }: HeaderBasePageProps) => (
-  <HeaderBasePage id={id} title={title} full={full} header={header}>
+  <HeaderBasePage
+    id={id}
+    title={title}
+    full={full}
+    jumbotron={jumbotron}
+    jumbotronClassName={jumbotronClassName}
+    jumbotronStyle={jumbotronStyle}
+  >
     {children}
   </HeaderBasePage>
 );
@@ -24,5 +33,5 @@ HeaderBasePageExample.args = {
   title: "Header Base Page Example",
   children: <p>Hello</p>,
   full: false,
-  header: <p>aaa</p>,
+  jumbotron: <p>aaa</p>,
 };
