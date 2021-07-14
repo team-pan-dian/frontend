@@ -13,11 +13,11 @@ export interface JumbotronBaseProps {
    *
    * @default py-12 pt-16 px-8 standard-color place-center
    */
-  jumbotronClassName?: string;
+  className?: string;
   /**
    * 頁面 Jumbotron 的 Style
    */
-  jumbotronStyle?: React.CSSProperties;
+  style?: React.CSSProperties;
 }
 
 /**
@@ -25,11 +25,11 @@ export interface JumbotronBaseProps {
  */
 export default function JumbotronBase({
   children: jumbotron,
-  jumbotronClassName = "py-12 pt-16 px-8 standard-color place-center",
-  jumbotronStyle = {},
+  className = "py-12 pt-16 px-8 standard-color place-center",
+  style = {},
 }: JumbotronBaseProps) {
   return (
-    <section className={jumbotronClassName} style={jumbotronStyle}>
+    <section className={className} style={style}>
       {jumbotron}
     </section>
   );
