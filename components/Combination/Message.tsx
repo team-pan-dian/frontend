@@ -25,12 +25,12 @@ const MessageLevelIcon: Record<MessageLevel, ReactNode> = {
   error: <FontAwesomeIcon icon={faTimesCircle} />,
 };
 
-export interface ErrorMessageProps {
+export interface MessageProps {
   errorMessage: string;
   mode: MessageLevel;
 }
 
-export default function Message({ errorMessage, mode }: ErrorMessageProps) {
+export default function Message({ errorMessage, mode }: MessageProps) {
   return (
     <div
       className={`flex w-full space-x-2 items-start p-4 ${MessageLevelClass[mode]}`}
