@@ -6,7 +6,6 @@ import {
   CourseInfoJumbotronStyle,
 } from "../../../components/Jumbotron/CourseInfoJumbotron";
 import HeaderBasePage from "../../../components/Page/HeaderBasePage";
-import VideoBundlePrefetchButton from "../../../components/OfflineVideo/VideoBundlePrefetchButton";
 import BaseInfoCard from "../../../components/Card/BaseInfoCard";
 import BaseCardsGroup from "../../../components/Card/BaseCardsGroup";
 import BaseButton from "../../../components/Buttons/BaseButton";
@@ -31,7 +30,18 @@ export default function ChooseLesson({
       id="choose-course"
       title="選擇課程"
       full
-      jumbotron={<CourseInfoJumbotron title={title} desc={desc} tags={tags} />}
+      jumbotron={
+        <CourseInfoJumbotron
+          title={title}
+          desc={desc}
+          tags={tags}
+          videos={[
+            {
+              url: "https://download.samplelib.com/mp4/sample-15s.mp4",
+            },
+          ]}
+        />
+      }
       jumbotronStyle={CourseInfoJumbotronStyle(backgroundImage)}
       jumbotronClassName={CourseInfoJumbotronClassName}
     >
@@ -54,15 +64,6 @@ export default function ChooseLesson({
             ))}
           </BaseCardsGroup>
         </main>
-        <section className="justify-self-end relative right-4 -top-4">
-          <VideoBundlePrefetchButton
-            videos={[
-              {
-                url: "https://download.samplelib.com/mp4/sample-15s.mp4",
-              },
-            ]}
-          />
-        </section>
       </div>
     </HeaderBasePage>
   );
