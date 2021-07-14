@@ -6,7 +6,10 @@ import {
   CourseInfoJumbotronStyle,
 } from "../../../components/Jumbotron/CourseInfoJumbotron";
 import HeaderBasePage from "../../../components/Page/HeaderBasePage";
-import FullWidthColoredButton from "../../../components/Buttons/FullWidthColoredButton";
+import VideoBundlePrefetchButton from "../../../components/OfflineVideo/VideoBundlePrefetchButton";
+import BaseInfoCard from "../../../components/Card/BaseInfoCard";
+import BaseCardsGroup from "../../../components/Card/BaseCardsGroup";
+import BaseButton from "../../../components/Buttons/BaseButton";
 
 export interface ChooseLessonProps {
   cid: string;
@@ -33,16 +36,33 @@ export default function ChooseLesson({
       jumbotronClassName={CourseInfoJumbotronClassName}
     >
       <div className="flex justify-center justify-items-center">
-        <div className="max-w-2xl">
-          {new Array(25).fill("怎麼配置環境？").map((value, key) => (
-            <FullWidthColoredButton
-              onClick={() => {}}
-              key={`${title}-${value}-${key - 1}`}
-            >
-              {value}
-            </FullWidthColoredButton>
-          ))}
-        </div>
+        <main>
+          <BaseCardsGroup>
+            {new Array(25).fill("怎麼配置環境？").map((value, key) => (
+              <BaseInfoCard
+                className="flex flex-col justify-center justify-items-center p-6"
+                key={`${title}-${value}-${key - 1}`}
+              >
+                <div className="mb-2">
+                  <div className="font-light">CH{key + 1}</div>
+                  <div className="text-xl font-bold">{value}</div>
+                </div>
+                <div>
+                  <BaseButton solid>播放</BaseButton>
+                </div>
+              </BaseInfoCard>
+            ))}
+          </BaseCardsGroup>
+        </main>
+        <section className="justify-self-end relative right-4 -top-4">
+          <VideoBundlePrefetchButton
+            videos={[
+              {
+                url: "https://download.samplelib.com/mp4/sample-15s.mp4",
+              },
+            ]}
+          />
+        </section>
       </div>
     </HeaderBasePage>
   );

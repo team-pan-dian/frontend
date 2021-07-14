@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+// import useSWR from "swr";
 import HeaderBasePage from "../../components/Page/HeaderBasePage";
 import CourseInfoCard from "../../components/Card/CourseInfoCard";
 import BaseCardsGroup from "../../components/Card/BaseCardsGroup";
 import SearchSelectCourse from "../../components/Jumbotron/SelectSearchCourse";
 
 export default function ChooseCourse() {
+  const [searchValue, setSearchValue] = useState("");
+  // const { data, error } = useSWR([""]);
   return (
     <HeaderBasePage
       id="choose-course"
       title="選擇課程"
-      jumbotron={<SearchSelectCourse />}
+      jumbotron={
+        <SearchSelectCourse
+          searchValue={searchValue}
+          searchOnChange={setSearchValue}
+        />
+      }
     >
       <BaseCardsGroup>
         <CourseInfoCard

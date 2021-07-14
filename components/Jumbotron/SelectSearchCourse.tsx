@@ -1,16 +1,19 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import BaseInput from "../Input/BaseInput";
+import SearchBar from "../Input/SearchBar";
 
-export default function SearchSelectCourse() {
+export interface SearchSelectCourseProps {
+  searchValue: string;
+  searchOnChange: (newSearchValue: string) => void;
+}
+
+export default function SearchSelectCourse({
+  searchValue,
+  searchOnChange,
+}: SearchSelectCourseProps) {
   return (
     <div className="flex flex-col items-center">
       <div className="text-xl font-bold mb-2">選擇或搜尋您感興趣的課程</div>
-      <div className="flex items-center space-x-2">
-        <BaseInput id="search-bar" />
-        <FontAwesomeIcon icon={faSearch} />
-      </div>
+      <SearchBar value={searchValue} onChange={searchOnChange} />
     </div>
   );
 }
