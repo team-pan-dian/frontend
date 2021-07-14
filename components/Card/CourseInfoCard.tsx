@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import React from "react";
-import { ColorTag } from "../BaseElements/ColorTag";
+import CourseInfo from "../Combination/CourseInfo";
 import BaseInfoCard from "./BaseInfoCard";
 
 export interface CourseInfoCardProps {
@@ -38,16 +38,8 @@ export default function CourseInfoCard({
         backgroundImage: `linear-gradient(to bottom, transparent, #000), url(${backgroundImage})`,
       }}
     >
-      <div className="p-8 text-white flex items-end content-end">
-        <div>
-          <div className="mb-1">
-            {tags.map((tag) => (
-              <ColorTag key={`${title}-tag-${tag}`}>{tag}</ColorTag>
-            ))}
-          </div>
-          <div className="text-xl font-bold mb-1">{title}</div>
-          <div className="text-sm">{desc}</div>
-        </div>
+      <div className="p-8 text-white flex items-end content-end w-full h-full">
+        <CourseInfo title={title} desc={desc} tags={tags} />
       </div>
     </BaseInfoCard>
   );
