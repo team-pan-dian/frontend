@@ -1,14 +1,13 @@
 import React from "react";
-import BaseButton from "../Buttons/BaseButton";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="absolute w-screen p-3 text-white standard-color bg-opacity-5">
-      <div className="flex justify-between justify-items-end items-center">
-        <div className="mix-blend-difference">Demotion</div>
-        <BaseButton className="min-w-12 border-white mix-blend-difference">
-          登出
-        </BaseButton>
+    <div className="absolute w-screen p-3 text-black standard-color bg-opacity-5">
+      <div className="flex justify-center items-center space-x-2 font-bold">
+        <Link href="/course">
+          <button type="button">Demotion</button>
+        </Link>
       </div>
     </div>
   );
