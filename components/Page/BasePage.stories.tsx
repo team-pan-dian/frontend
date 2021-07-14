@@ -12,9 +12,10 @@ export const BasePageExample: Story<BasePageProps> = ({
   id,
   title,
   full,
+  navbar,
   children = <p>Hello</p>,
 }: BasePageProps) => (
-  <BasePage id={id} title={title} full={full}>
+  <BasePage id={id} title={title} full={full} navbar={navbar}>
     {children}
   </BasePage>
 );

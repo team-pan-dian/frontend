@@ -1,14 +1,15 @@
 import React from "react";
 import Head from "next/head";
 import type { ReactNode } from "react";
-import Navbar from "../Navbar/Navbar";
 import styles from "../../styles/BasePage.module.css";
 import { PRODUCT_NAME } from "../../consts";
+import Navbar from "../Navbar/Navbar";
 
 export interface BasePageProps {
   id: string;
   children: ReactNode;
   full?: boolean;
+  navbar?: boolean;
   title: string;
 }
 
@@ -16,6 +17,7 @@ export default function BasePage({
   title,
   id,
   full = false,
+  navbar = true,
   children,
 }: BasePageProps) {
   return (
@@ -25,27 +27,13 @@ export default function BasePage({
           {PRODUCT_NAME} - {title}
         </title>
       </Head>
+      {navbar && <Navbar />}
       <section
         className={`page-root page-${id} grid ${styles.basepageGrid} ${
-          full && "w-screen h-screen"
+          full && "max-h-screen min-h-screen w-screen"
         }`}
       >
-        <section
-          className={`page-${id}`}
-          style={{
-            gridArea: "navbar",
-          }}
-        >
-          <Navbar />
-        </section>
-        <section
-          className={`${full && "h-full w-full"}`}
-          style={{
-            gridArea: "content",
-          }}
-        >
-          {children}
-        </section>
+        {children}
       </section>
     </>
   );
