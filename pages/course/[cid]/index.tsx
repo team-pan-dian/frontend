@@ -32,8 +32,8 @@ export default function ChooseLesson({
       jumbotronStyle={CourseInfoJumbotronStyle(backgroundImage)}
       jumbotronClassName={CourseInfoJumbotronClassName}
     >
-      <div className="grid grid-cols-2">
-        <div className="">
+      <div className="flex justify-center justify-items-center">
+        <div className="max-w-2xl">
           {new Array(25).fill("怎麼配置環境？").map((value, key) => (
             <FullWidthColoredButton
               onClick={() => {}}
