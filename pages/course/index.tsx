@@ -1,26 +1,17 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import HeaderBasePage from "../../components/Page/HeaderBasePage";
-import BaseInput from "../../components/BaseElements/BaseInput";
 import CourseInfoCard from "../../components/Card/CourseInfoCard";
+import BaseCardsGroup from "../../components/Card/BaseCardsGroup";
+import SearchSelectCourse from "../../components/Jumbotron/SelectSearchCourse";
 
 export default function ChooseCourse() {
   return (
     <HeaderBasePage
       id="choose-course"
       title="選擇課程"
-      jumbotron={
-        <div className="flex flex-col items-center">
-          <div className="text-xl font-bold mb-2">選擇或搜尋您感興趣的課程</div>
-          <div className="flex items-center space-x-2">
-            <BaseInput id="search-bar" />
-            <FontAwesomeIcon icon={faSearch} />
-          </div>
-        </div>
-      }
+      jumbotron={<SearchSelectCourse />}
     >
-      <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 m-6 justify-center justify-items-center">
+      <BaseCardsGroup>
         <CourseInfoCard
           title="沒有駭客學校，但你可以自學。"
           desc="這堂課程可以讓您從零基礎，搖身一遍成為資安高手。"
@@ -69,7 +60,7 @@ export default function ChooseCourse() {
           tags={["資訊"]}
           backgroundImage="/hacker.jpg"
         />
-      </div>
+      </BaseCardsGroup>
     </HeaderBasePage>
   );
 }
