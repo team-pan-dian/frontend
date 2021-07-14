@@ -4,7 +4,7 @@ import type { BaseButtonProps } from "./BaseButton";
 import BaseButton from "./BaseButton";
 
 export default {
-  title: "BaseElements/BaseButton",
+  title: "Buttons/BaseButton",
   component: BaseButton,
 } as Meta;
 

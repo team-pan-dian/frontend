@@ -4,7 +4,7 @@ import type { FullWidthColoredButtonProps } from "./FullWidthColoredButton";
 import FullWidthColoredButton from "./FullWidthColoredButton";
 
 export default {
-  title: "BaseElements/FullWidthColoredButton",
+  title: "Buttons/FullWidthColoredButton",
   component: FullWidthColoredButton,
 } as Meta;
 

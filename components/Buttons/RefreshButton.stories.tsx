@@ -5,7 +5,7 @@ import type { RefreshButtonProps } from "./RefreshButton";
 import RefreshButtonComponent from "./RefreshButton";
 
 export default {
-  title: "BaseElements/RefreshButton",
+  title: "Buttons/RefreshButton",
   component: RefreshButtonComponent,
 } as Meta;
 
