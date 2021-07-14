@@ -17,10 +17,11 @@ const Template: Story<BaseCardsGroupProps> = ({
 
 const DarkSingleTagCard = () => {
   if (DarkSingleTag.args) {
-    const { title, desc, tags, backgroundImage } = DarkSingleTag.args;
-    if (title && desc && tags && backgroundImage)
+    const { id, title, desc, tags, backgroundImage } = DarkSingleTag.args;
+    if (id && title && desc && tags && backgroundImage)
       return (
         <DarkSingleTag
+          id={id}
           title={title}
           desc={desc}
           tags={tags}
@@ -34,10 +35,11 @@ const DarkSingleTagCard = () => {
 
 const LightMultipleTagsCard = () => {
   if (LightMultipleTags.args) {
-    const { title, desc, tags, backgroundImage } = LightMultipleTags.args;
-    if (title && desc && tags && backgroundImage)
+    const { id, title, desc, tags, backgroundImage } = LightMultipleTags.args;
+    if (id && title && desc && tags && backgroundImage)
       return (
         <DarkSingleTag
+          id={id}
           title={title}
           desc={desc}
           tags={tags}
