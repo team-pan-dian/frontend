@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import React from "react";
+import JumbotronBase from "../Jumbotron/JumbotronBase";
 import BasePage from "./BasePage";
 
 export interface HeaderBasePageProps {
@@ -24,17 +25,21 @@ export interface HeaderBasePageProps {
   /**
    * 頁面 Jumbotron 部分
    *
-   * 可放入 React 元件。
+   * **注意：**裡面不要再包一層 `JumbotronBase`。
+   *
+   * @see JumbotronBase.children
    */
   jumbotron: ReactNode;
   /**
    * 頁面 Jumbotron 的 Class Name
    *
-   * @default py-12 pt-16 px-8 standard-color place-center
+   * @see JumbotronBase.className
    */
   jumbotronClassName?: string;
   /**
    * 頁面 Jumbotron 的 Style
+   *
+   * @see JumbotronBase.style
    */
   jumbotronStyle?: React.CSSProperties;
 }
@@ -53,9 +58,9 @@ export default function HeaderBasePage({
 }: HeaderBasePageProps) {
   return (
     <BasePage id={id} title={title} full={full}>
-      <section className={jumbotronClassName} style={jumbotronStyle}>
+      <JumbotronBase className={jumbotronClassName} style={jumbotronStyle}>
         {jumbotron}
-      </section>
+      </JumbotronBase>
       {children}
     </BasePage>
   );
