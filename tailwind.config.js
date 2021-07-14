@@ -17,7 +17,10 @@ module.exports = {
       },
       minHeight: {
         "card": "18em",
-      }
+      },
+      minWidth: {
+        "12": "3rem",
+      },
     },
   },
   variants: {
