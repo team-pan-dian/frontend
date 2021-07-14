@@ -1,5 +1,6 @@
 import React from "react";
 import type { Meta, Story } from "@storybook/react";
+import type { VideoInfo } from "../OfflineVideo/cacheVideo";
 import JumbotronBase from "./JumbotronBase";
 import type { CourseInfoJumbotronProps } from "./CourseInfoJumbotron";
 import {
@@ -16,6 +17,8 @@ export default {
   },
 } as Meta;
 
+const videos: VideoInfo[] = [];
+
 export const DarkSingleTag: Story<CourseInfoJumbotronProps> = ({
   title,
   desc,
@@ -28,7 +31,12 @@ export const DarkSingleTag: Story<CourseInfoJumbotronProps> = ({
       "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
     )}
   >
-    <CourseInfoJumbotron title={title} desc={desc} tags={tags} />
+    <CourseInfoJumbotron
+      title={title}
+      desc={desc}
+      tags={tags}
+      videos={videos}
+    />
   </JumbotronBase>
 );
 DarkSingleTag.args = {
@@ -49,7 +57,12 @@ export const DarkMultipleTags: Story<CourseInfoJumbotronProps> = ({
       "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
     )}
   >
-    <CourseInfoJumbotron title={title} desc={desc} tags={tags} />
+    <CourseInfoJumbotron
+      title={title}
+      desc={desc}
+      tags={tags}
+      videos={videos}
+    />
   </JumbotronBase>
 );
 DarkMultipleTags.args = {
@@ -70,7 +83,12 @@ export const LightSingleTag: Story<CourseInfoJumbotronProps> = ({
       "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     )}
   >
-    <CourseInfoJumbotron title={title} desc={desc} tags={tags} />
+    <CourseInfoJumbotron
+      title={title}
+      desc={desc}
+      tags={tags}
+      videos={videos}
+    />
   </JumbotronBase>
 );
 LightSingleTag.args = {
@@ -91,7 +109,12 @@ export const LightMultipleTags: Story<CourseInfoJumbotronProps> = ({
       "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     )}
   >
-    <CourseInfoJumbotron title={title} desc={desc} tags={tags} />
+    <CourseInfoJumbotron
+      title={title}
+      desc={desc}
+      tags={tags}
+      videos={videos}
+    />
   </JumbotronBase>
 );
 LightMultipleTags.args = {

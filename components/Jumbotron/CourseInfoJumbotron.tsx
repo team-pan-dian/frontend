@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import React from "react";
 import CourseInfo from "../Combination/CourseInfo";
+import VideoBundlePrefetchButton from "../OfflineVideo/VideoBundlePrefetchButton";
+import type { VideoInfo } from "../OfflineVideo/cacheVideo";
 
 export interface CourseInfoJumbotronProps {
   /**
@@ -15,6 +17,12 @@ export interface CourseInfoJumbotronProps {
    * 課程標籤
    */
   tags: string[];
+  /**
+   * 課程內含影片
+   *
+   * 用來 Prefetch。
+   */
+  videos: VideoInfo[];
 }
 
 /**
@@ -24,10 +32,16 @@ export function CourseInfoJumbotron({
   title,
   desc,
   tags,
+  videos,
 }: CourseInfoJumbotronProps) {
   return (
-    <div className="flex flex-col items-center text-white">
-      <CourseInfo title={title} desc={desc} tags={tags} />
+    <div className="grid grid-cols-2 justify-between items-end text-white w-full h-full">
+      <div>
+        <CourseInfo title={title} desc={desc} tags={tags} />
+      </div>
+      <div className="justify-self-end">
+        <VideoBundlePrefetchButton videos={videos} />
+      </div>
     </div>
   );
 }
