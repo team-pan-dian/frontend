@@ -9,6 +9,7 @@ export default {
 } as Meta;
 
 const Template: Story<CourseInfoCardProps> = ({
+  id,
   title,
   desc,
   tags,
@@ -16,6 +17,7 @@ const Template: Story<CourseInfoCardProps> = ({
 }: CourseInfoCardProps) => (
   <div className="grid">
     <CourseInfoCard
+      id={id}
       title={title}
       desc={desc}
       tags={tags}
@@ -26,6 +28,7 @@ const Template: Story<CourseInfoCardProps> = ({
 
 export const DarkSingleTag = Template.bind({});
 DarkSingleTag.args = {
+  id: "dark-single-tag",
   title: "沒有駭客學校，但你可以自學。",
   desc: "這堂課程可以讓您從零基礎，搖身一遍成為資安高手。",
   tags: ["資訊"],
@@ -36,6 +39,7 @@ DarkSingleTag.args = {
 
 export const DarkMultipleTags = Template.bind({});
 DarkMultipleTags.args = {
+  id: "dark-multiple-tag",
   title: "沒有駭客學校，但你可以自學。",
   desc: "這堂課程可以讓您從零基礎，搖身一遍成為資安高手。",
   tags: ["資訊", "資安", "駭客"],
@@ -46,6 +50,7 @@ DarkMultipleTags.args = {
 
 export const LightSingleTag = Template.bind({});
 LightSingleTag.args = {
+  id: "light-single-tag",
   title: "沒有駭客學校，但你可以自學。",
   desc: "這堂課程可以讓您從零基礎，搖身一遍成為資安高手。",
   tags: ["資訊"],
@@ -56,6 +61,7 @@ LightSingleTag.args = {
 
 export const LightMultipleTags = Template.bind({});
 LightMultipleTags.args = {
+  id: "light-multiple-tag",
   title: "沒有駭客學校，但你可以自學。",
   desc: "這堂課程可以讓您從零基礎，搖身一遍成為資安高手。",
   tags: ["資訊", "資安", "駭客"],
