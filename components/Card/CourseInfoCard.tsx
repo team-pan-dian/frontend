@@ -35,10 +35,10 @@ export default function CourseInfoCard({
     <BaseInfoCard
       className="bg-cover"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to bottom, transparent, #000), url(${backgroundImage})`,
       }}
     >
-      <div className="p-8 bg-black bg-opacity-60 text-white flex items-end content-end w-full h-full">
+      <div className="p-8 text-white flex items-end content-end">
         <div>
           <div className="mb-1">
             {tags.map((tag) => (
