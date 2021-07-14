@@ -10,7 +10,7 @@ export default function ChooseCourse() {
     <HeaderBasePage
       id="choose-course"
       title="選擇課程"
-      header={
+      jumbotron={
         <div className="flex flex-col items-center">
           <div className="text-xl font-bold mb-2">選擇或搜尋您感興趣的課程</div>
           <div className="flex items-center space-x-2">
