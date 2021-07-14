@@ -4,7 +4,7 @@ import type { BaseInputsProps } from "./BaseInput";
 import BaseInput from "./BaseInput";
 
 export default {
-  title: "BaseElements/BaseInput",
+  title: "Input/BaseInput",
   component: BaseInput,
 } as Meta;
 

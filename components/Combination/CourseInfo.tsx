@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import React from "react";
-import { ColorTag } from "../BaseElements/ColorTag";
+import { ColorTag } from "../Tags/ColorTag";
 
 export interface CourseInfoProps {
   /**

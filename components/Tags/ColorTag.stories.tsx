@@ -4,7 +4,7 @@ import type { ColorTagProps } from "./ColorTag";
 import { ColorTag } from "./ColorTag";
 
 export default {
-  title: "BaseElements/ColorTag",
+  title: "Tags/ColorTag",
   component: ColorTag,
 } as Meta;
 

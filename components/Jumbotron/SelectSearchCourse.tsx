@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import BaseInput from "../BaseElements/BaseInput";
+import BaseInput from "../Input/BaseInput";
 
 export default function SearchSelectCourse() {
   return (
