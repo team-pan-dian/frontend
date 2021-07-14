@@ -1,5 +1,5 @@
 import React from "react";
-import BaseButton from "../BaseElements/BaseButton";
+import BaseButton from "../Buttons/BaseButton";
 
 export default function Navbar() {
   return (

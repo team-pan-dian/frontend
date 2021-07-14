@@ -6,7 +6,7 @@ import {
   CourseInfoJumbotronStyle,
 } from "../../../components/Jumbotron/CourseInfoJumbotron";
 import HeaderBasePage from "../../../components/Page/HeaderBasePage";
-import FullWidthColoredButton from "../../../components/BaseElements/FullWidthColoredButton";
+import FullWidthColoredButton from "../../../components/Buttons/FullWidthColoredButton";
 
 export interface ChooseLessonProps {
   cid: string;

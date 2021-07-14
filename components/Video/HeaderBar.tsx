@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
-import BaseButton from "../BaseElements/BaseButton";
+import BaseButton from "../Buttons/BaseButton";
 
 export interface HeaderBarProps {
   /**

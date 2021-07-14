@@ -1,6 +1,6 @@
 import React from "react";
 import BaseInput from "../../components/BaseElements/BaseInput";
-import BaseButton from "../../components/BaseElements/BaseButton";
+import BaseButton from "../../components/Buttons/BaseButton";
 
 export default function LoginPage() {
   return (
