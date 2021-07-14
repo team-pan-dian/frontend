@@ -11,7 +11,7 @@ export default {
   },
 } as Meta;
 
-export const NormalForm: Story = () => (
+export const SelectSearchCourseExample: Story = () => (
   <JumbotronBase>
     <SelectSearchCourse />
   </JumbotronBase>
