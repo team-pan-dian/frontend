@@ -1,15 +1,14 @@
 import React from "react";
+import BaseButton from "../BaseElements/BaseButton";
 
 export default function Navbar() {
   return (
-    <div className="fixed left-0 top-0 w-screen">
-      <div className="p-4 grid grid-col-1 md:grid-col-3 content-center items-center bg-gray-100 bg-opacity-75 backdrop-filter backdrop-blur-xl">
-        <div className="col-start-1 col-end-1">
-          <p>Demotion</p>
-        </div>
-        <div className="col-start-3 col-end-3 justify-self-end">
-          歡迎，Student
-        </div>
+    <div className="absolute w-screen p-3 text-white standard-color bg-opacity-5">
+      <div className="flex justify-between justify-items-end items-center">
+        <div className="mix-blend-difference">Demotion</div>
+        <BaseButton className="min-w-12 border-white mix-blend-difference">
+          登出
+        </BaseButton>
       </div>
     </div>
   );
