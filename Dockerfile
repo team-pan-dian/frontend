@@ -5,7 +5,7 @@ COPY . fe
 WORKDIR fe
 
 # Install the dependencies
-RUN yarn;
+RUN yarn --production;
 
 # Build the frontend
 RUN yarn build;
