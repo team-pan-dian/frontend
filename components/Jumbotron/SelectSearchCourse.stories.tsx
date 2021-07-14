@@ -13,6 +13,6 @@ export default {
 
 export const SelectSearchCourseExample: Story = () => (
   <JumbotronBase>
-    <SelectSearchCourse />
+    <SelectSearchCourse searchValue="" searchOnChange={() => null} />
   </JumbotronBase>
 );

@@ -50,7 +50,7 @@ HeaderBasePageExample1.args = {
   title: "Header Base Page Example",
   children: <ExampleContent />,
   full: false,
-  jumbotron: <SelectSearchCourse />,
+  jumbotron: <SelectSearchCourse searchValue="" searchOnChange={() => null} />,
 };
 
 export const HeaderBasePageExample2 = Template.bind({});
@@ -64,6 +64,7 @@ HeaderBasePageExample2.args = {
       title="沒有駭客學校，但你可以自學。"
       desc="這堂課程可以讓您從零基礎，搖身一遍成為資安高手。"
       tags={["資訊"]}
+      videos={[]}
     />
   ),
   jumbotronClassName: CourseInfoJumbotronClassName,
