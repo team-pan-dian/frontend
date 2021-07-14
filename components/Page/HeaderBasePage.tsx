@@ -32,7 +32,7 @@ export interface HeaderBasePageProps {
    *
    * @default py-12 pt-16 px-8 standard-color place-center
    */
-  jumbotronClassName: string;
+  jumbotronClassName?: string;
   /**
    * 頁面 Jumbotron 的 Style
    */
