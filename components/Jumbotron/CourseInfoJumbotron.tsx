@@ -33,7 +33,7 @@ export function CourseInfoJumbotron({
 }
 
 export const CourseInfoJumbotronClassName =
-  "py-6 pt-32 px-6 flex items-end justify-left bg-blend-darken bg-cover";
+  "pb-6 pt-36 px-6 flex items-end justify-left bg-blend-darken bg-cover";
 export const CourseInfoJumbotronStyle = (backgroundImage: string) =>
   ({
     backgroundImage: `linear-gradient(to bottom, transparent, #000), url('${backgroundImage}')`,
