@@ -6,14 +6,17 @@ export const BasicResponseSchema = myzod.object({
   errorMessage: myzod.string(),
 });
 
-export default async function DataFetcher(path: string) {
+export default async function DataFetcher(
+  path: string,
+  init: RequestInit = {}
+) {
   const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
   if (typeof endpoint !== "string")
     throw new Error(
       "You should specify the value to NEXT_PUBLIC_API_ENDPOINT environment variable."
     );
 
-  const responseData = await fetch(`${endpoint}/${path}`);
+  const responseData = await fetch(`${endpoint}/${path}`, init);
   return responseData.json();
 }
 
