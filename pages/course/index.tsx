@@ -28,22 +28,24 @@ export default function ChooseCourse() {
           mode={MessageLevel.ERROR}
         />
       )}
-      {data && (
-        <BaseCardsGroup>
-          {data.data
-            .filter((course) => course.name.includes(searchValue))
-            .map((course) => (
-              <CourseInfoCard
-                key={`course-${course.id}`}
-                id={course.id}
-                title={course.name}
-                desc={course.information}
-                tags={CommaTagStringToTags(course.type)}
-                backgroundImage={course.img}
-              />
-            ))}
-        </BaseCardsGroup>
-      )}
+      <main>
+        {data && (
+          <BaseCardsGroup>
+            {data.data
+              .filter((course) => course.name.includes(searchValue))
+              .map((course) => (
+                <CourseInfoCard
+                  key={`course-${course.id}`}
+                  id={course.id}
+                  title={course.name}
+                  desc={course.information}
+                  tags={CommaTagStringToTags(course.type)}
+                  backgroundImage={course.img}
+                />
+              ))}
+          </BaseCardsGroup>
+        )}
+      </main>
     </HeaderBasePage>
   );
 }
