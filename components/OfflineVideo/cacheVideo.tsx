@@ -1,3 +1,5 @@
+import DataFetcher from "../Fetcher/DataFetcher";
+
 export interface VideoInfo {
   cid: string;
   vid: string;
@@ -17,6 +19,10 @@ export async function PrefetchVideoGroup(videos: VideoInfo[]): Promise<null> {
       fetch(url, {
         mode: "no-cors",
       })
+    ),
+    // video metadata
+    ...videos.map(async ({ cid, vid }) =>
+      DataFetcher(`/api/class/${cid}/${vid}`)
     ),
     // player
     ...videos.map(async ({ cid, vid }) =>
